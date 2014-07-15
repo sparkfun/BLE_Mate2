@@ -14631,7 +14631,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G3" pin="UART_TX" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="WRL-12203"/>
+<attribute name="VALUE" value="BC118"/>
+</technology>
 </technologies>
 </device>
 </devices>
