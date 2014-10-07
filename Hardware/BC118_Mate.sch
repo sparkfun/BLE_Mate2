@@ -137,7 +137,7 @@
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S.%C%R" xrefpart="1_/%S.%C%R">
+<schematic xreflabel="%F%N/%S" xrefpart="1_/%S.%C%R">
 <libraries>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -17138,8 +17138,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R5" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
-<part name="LED1" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
-<part name="LED0" library="SparkFun-LED" deviceset="LED-RED" device="0603" value="RED"/>
+<part name="LED0" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
+<part name="LED1" library="SparkFun-LED" deviceset="LED-RED" device="0603" value="RED"/>
 <part name="LEDS" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-NC_BY_PASTE" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M09" device=""/>
@@ -17264,7 +17264,7 @@ clear LEDs jumper.
 Of course, the connected device must be designed
 for minimal power use, as well, but that's your problem!</text>
 <text x="167.64" y="7.62" size="3.81" layer="94">M. Hord</text>
-<text x="238.252" y="7.366" size="3.81" layer="94">v01</text>
+<text x="238.252" y="7.366" size="3.81" layer="94">v10</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -17300,8 +17300,8 @@ for minimal power use, as well, but that's your problem!</text>
 <instance part="GND3" gate="1" x="10.16" y="132.08"/>
 <instance part="R5" gate="G$1" x="119.38" y="63.5" rot="R90"/>
 <instance part="R8" gate="G$1" x="104.14" y="63.5" rot="R90"/>
-<instance part="LED1" gate="G$1" x="104.14" y="76.2"/>
-<instance part="LED0" gate="G$1" x="119.38" y="76.2"/>
+<instance part="LED0" gate="G$1" x="104.14" y="76.2"/>
+<instance part="LED1" gate="G$1" x="119.38" y="76.2"/>
 <instance part="LEDS" gate="G$1" x="111.76" y="53.34" smashed="yes" rot="R90">
 <attribute name="NAME" x="108.712" y="55.245" size="1.778" layer="95"/>
 </instance>
@@ -17588,32 +17588,28 @@ for minimal power use, as well, but that's your problem!</text>
 <net name="N$8" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="LED0" gate="G$1" pin="C"/>
 <wire x1="104.14" y1="68.58" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="LED0" gate="G$1" pin="C"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="119.38" y1="68.58" x2="119.38" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PIO_10" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="104.14" y1="78.74" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G2" pin="PIO_10"/>
-<wire x1="104.14" y1="86.36" x2="96.52" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
-<junction x="104.14" y="86.36"/>
+<wire x1="96.52" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="G$1" pin="6"/>
 <label x="127" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIO_9" class="0">
 <segment>
-<pinref part="LED0" gate="G$1" pin="A"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="78.74" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G2" pin="PIO_9"/>
 <wire x1="119.38" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
@@ -17655,6 +17651,9 @@ for minimal power use, as well, but that's your problem!</text>
 <wire x1="124.46" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="101.6" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
 <label x="127" y="121.92" size="1.778" layer="95"/>
+<pinref part="LED0" gate="G$1" pin="A"/>
+<wire x1="104.14" y1="78.74" x2="104.14" y2="101.6" width="0.1524" layer="91"/>
+<junction x="104.14" y="101.6"/>
 </segment>
 </net>
 <net name="PIO_3" class="0">
