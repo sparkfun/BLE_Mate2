@@ -12,7 +12,7 @@ us at the local.
 Code developed in Arduino 1.0.6, on an Arduino Pro 5V.
 ****************************************************************/
 
-#include "BLE_Mate2.h"
+#include "SparkFun_BLEMate2.h"
 #include <Arduino.h>
 
 // Constructor. All we really need to do is link the user's Stream instance to
