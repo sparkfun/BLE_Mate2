@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/pro5v328/LibraryTest.cpp : ./LibraryTest.ino
+	@mkdir -p .build/pro5v328
+	@echo [93m./LibraryTest.ino[0m
+	@/home/Mike/dropbox/Projects/ino/bin/ino preproc  -o $@ $^
+
+
+all : .build/pro5v328/LibraryTest.cpp
+	@true
+
